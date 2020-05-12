@@ -22,8 +22,8 @@ class ShippingMethods extends \Magento\Framework\App\Helper\AbstractHelper
         $minimumAmount = null;
 
         foreach ($this->freeShippingMethodsProvider->getShippingMethodsWithFreeShipping() as $methodData) {
-            if ($methodData['value'] < $minimumAmount) {
-                $minimumAmount = $methodData['value'];
+            if (!$minimumAmount || (int) $methodData['value'] < $minimumAmount) {
+                $minimumAmount = (int) $methodData['value'];
             }
         }
 

@@ -73,7 +73,7 @@ class FreeShippingMethodsProvider
             return self::DEFAULT_FREE_SHIPPING_ACTIVE_FIELD;
         }
 
-        if (in_array($code, $this->customFreeShippingFieldsMap)) {
+        if (isset($this->customFreeShippingFieldsMap[$code])) {
             return $this->customFreeShippingFieldsMap[$code];
         }
 
@@ -82,7 +82,7 @@ class FreeShippingMethodsProvider
 
     protected function getSubtotalField($code)
     {
-        if (in_array($code, $this->customFreeShippingFieldsMap)) {
+        if (isset($this->customFreeShippingFieldsMap[$code])) {
             return $this->customFreeShippingFieldsMap[$code];
         }
 
