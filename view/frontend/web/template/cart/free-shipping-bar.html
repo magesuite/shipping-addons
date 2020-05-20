@@ -1,0 +1,30 @@
+<tr class="totals cs-free-shipping-indicator" data-bind="if: isDisplayed()">
+    <th colspan="2" class="cs-free-shipping-indicator__cell">
+        <!-- ko if: isDisplayAmountLeft() -->
+            <p class="cs-free-shipping-indicator__total-left">
+                <span class="cs-free-shipping-indicator__total-left-text" data-bind="html: getAmountLeftText()"></span> 
+            </p>
+        <!-- /ko -->
+        <!-- ko ifnot: isDisplayAmountLeft() -->
+            <p class="cs-free-shipping-indicator__total-fulfilled"> 
+                <span data-bind="i18n: fulfilledText"></span>
+            </p>
+        <!-- /ko -->
+        <div class="cs-free-shipping-indicator__bar-wrapper" data-bind="css: { 'cs-free-shipping-indicator__bar-wrapper--free-shipping-active': getPercentage() >= 100 }">
+            <!-- ko if: displayThresholdValues -->
+                <span class="cs-free-shipping-indicator__bar-label cs-free-shipping-indicator__bar-label--start" data-bind="text: getFormattedPrice(0, true)"></span>
+            <!-- /ko -->
+            <div class="cs-free-shipping-indicator__bar">
+                <div class="cs-free-shipping-indicator__bar-progress" data-bind="style: { width: getPercentage() + '%' } "></div>
+            </div>
+            <!-- ko if: displayThresholdValues -->
+                <span class="cs-free-shipping-indicator__bar-label cs-free-shipping-indicator__bar-label--end" data-bind="text: getFormattedPrice(freeShippingPrice, true)"></span>
+            <!-- /ko -->
+            <!-- ko if: shippingIconUrl -->
+            <img class="inline-svg cs-free-shipping-indicator__icon"
+                data-bind="attr: { src: require.toUrl(shippingIconUrl) }"
+                alt="">
+            <!-- /ko -->
+        </div>
+    </th>
+ </div>

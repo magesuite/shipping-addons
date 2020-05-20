@@ -1,0 +1,13 @@
+<div data-bind="scope:'free_shipping_bar'" data-block="free-shipping-bar" class="cs-free-shipping-indicator cs-free-shipping-indicator--minicart">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "[data-block='free-shipping-bar']": {
+                "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout() ?>
+            },
+            "*": {
+                "Magento_Ui/js/block-loader": "<?= /* @escapeNotVerified */ $block->getViewFileUrl('images/loader-1.gif') ?>"
+            }
+        }
+    </script>
+</div>
