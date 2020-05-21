@@ -43,10 +43,11 @@ class ShippingMethodsTest extends \PHPUnit\Framework\TestCase
      * @magentoDbIsolation enabled
      * @magentoConfigFixture current_store carriers/freeshipping/active 1
      * @magentoConfigFixture current_store carriers/freeshipping/free_shipping_subtotal 100
-     * @magentoConfigFixture current_store carriers/flatrate1/active 1
-     * @magentoConfigFixture current_store carriers/flatrate1/minimum_subtotal_for_free_shipping 40
+     * @magentoConfigFixture current_store carriers/usps/active 1
+     * @magentoConfigFixture current_store carriers/usps/free_shipping_enable 1
+     * @magentoConfigFixture current_store carriers/usps/free_shipping_subtotal 40
      */
-    public function testItReturnFlatrateShippingMethod()
+    public function testItReturnUspsShippingMethod()
     {
         $freeShippingAmount = $this->shippingMethodsHelper->getMinimumFreeShippingAmount();
 
