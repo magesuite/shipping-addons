@@ -7,24 +7,29 @@
                 with `Free Shipping` threshold has to be enabled.
                 For eg. `Free Shipping` method takes threshold value
                 from `Minimum Order Amount` field.
+                NOTE: This component is disabled by default!
+                Pls. refer to below configuration.
             -->
-           <block class="Magento\Checkout\Block\Cart\Sidebar" name="free.shipping.bar" template="MageSuite_ShippingAddons::cart/free-shipping-bar.phtml">
-               <arguments>
-                   <argument name="jsLayout" xsi:type="array">
-                       <item name="components" xsi:type="array">
-                           <item name="free_shipping_bar" xsi:type="array">
-                               <item name="component" xsi:type="string">MageSuite_ShippingAddons/js/view/free-shipping-bar</item>
-                               <item name="config" xsi:type="array">
-                                   <item name="template" xsi:type="string">MageSuite_ShippingAddons/minicart/free-shipping-bar</item>
-                                   <item name="fulfilledText" xsi:type="string" translate="true">Free shipping applied</item>
-                                   <item name="displayThresholdValues" xsi:type="boolean">true</item>
-                                   <item name="shippingIconUrl" xsi:type="string">images/icons/shipping.svg</item>
-                               </item>
-                           </item>
-                       </item>
-                   </argument>
-               </arguments>
-           </block>
+            <block class="Magento\Checkout\Block\Cart\Sidebar" name="free.shipping.bar" template="MageSuite_ShippingAddons::cart/free-shipping-bar.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="free_shipping_bar" xsi:type="array">
+                                <item name="component" xsi:type="string">MageSuite_ShippingAddons/js/view/free-shipping-bar</item>
+                                <item name="config" xsi:type="array">
+                                    <!-- This component is disabled by default -->
+                                    <item name="componentDisabled" xsi:type="boolean">true</item>
+                                    <item name="template" xsi:type="string">MageSuite_ShippingAddons/minicart/free-shipping-bar</item>
+                                    <item name="amountLeftText" xsi:type="string" translate="true">more for free shipping</item>
+                                    <item name="fulfilledText" xsi:type="string" translate="true">Free shipping applied</item>
+                                    <item name="displayThresholdValues" xsi:type="boolean">true</item>
+                                    <item name="shippingIconUrl" xsi:type="string">images/icons/shipping.svg</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
        </referenceContainer>
     </body>
 </page>

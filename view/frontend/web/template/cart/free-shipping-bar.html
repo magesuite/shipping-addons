@@ -15,7 +15,9 @@
                 <span class="cs-free-shipping-indicator__bar-label cs-free-shipping-indicator__bar-label--start" data-bind="text: getFormattedPrice(0, true)"></span>
             <!-- /ko -->
             <div class="cs-free-shipping-indicator__bar">
-                <div class="cs-free-shipping-indicator__bar-progress" data-bind="style: { width: getPercentage() + '%' } "></div>
+                <div class="cs-free-shipping-indicator__bar-progress-wrapper">
+                    <div class="cs-free-shipping-indicator__bar-progress" data-bind="style: { width: getPercentage() + '%' } "></div>
+                </div>
             </div>
             <!-- ko if: displayThresholdValues -->
                 <span class="cs-free-shipping-indicator__bar-label cs-free-shipping-indicator__bar-label--end" data-bind="text: getFormattedPrice(freeShippingPrice, true)"></span>
