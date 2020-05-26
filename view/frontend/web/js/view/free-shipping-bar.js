@@ -24,7 +24,6 @@ define([
             this.cart = customerData.get('cart');
             this.freeShippingPrice = config.freeShippingFrom;
             this.localePriceFormat = config.priceFormat;
-            this.amountLeftText = config.amountLeftText;
         },
 
         getTotalCartItems: function() {
@@ -71,12 +70,9 @@ define([
         },
 
         getAmountLeftText: function() {
-            return $t('<span>%1</span> %2').replace(
+            return $t('<span>%1</span> more for free shipping').replace(
                 '%1',
                 this.getAmountLeft()
-            ).replace(
-                '%2',
-                this.amountLeftText
             );
         },
     });
