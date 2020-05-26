@@ -20,7 +20,6 @@
                                     <!-- This component is disabled by default -->
                                     <item name="componentDisabled" xsi:type="boolean">true</item>
                                     <item name="template" xsi:type="string">MageSuite_ShippingAddons/minicart/free-shipping-bar</item>
-                                    <item name="amountLeftText" xsi:type="string" translate="true">more for free shipping</item>
                                     <item name="fulfilledText" xsi:type="string" translate="true">Free shipping applied</item>
                                     <item name="displayThresholdValues" xsi:type="boolean">true</item>
                                     <item name="shippingIconUrl" xsi:type="string">images/icons/shipping.svg</item>
