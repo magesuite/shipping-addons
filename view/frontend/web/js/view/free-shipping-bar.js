@@ -31,7 +31,7 @@ define([
         },
 
         isDisplayed: function() {
-            return this.getTotalCartItems() > 0;
+            return this.getTotalCartItems() > 0 && this.freeShippingPrice != null;
         },
 
         getPercentage: function() {
