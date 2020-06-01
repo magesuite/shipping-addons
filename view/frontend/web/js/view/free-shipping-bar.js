@@ -23,7 +23,7 @@ define([
             this._super();
             this.cart = customerData.get('cart');
             this.freeShippingPrice = config.freeShippingFrom;
-            this.localePriceFormat = config.priceFormat;
+            this.localePriceFormat = JSON.parse(config.priceFormat);
         },
 
         getTotalCartItems: function() {
@@ -54,6 +54,7 @@ define([
                 precision: 0,
                 requiredPrecision: 0,
             };
+
             var priceFormat =
                 round || (Number(price) === price && price % 1 === 0)
                     ? _.extend({}, this.localePriceFormat, rounded)
