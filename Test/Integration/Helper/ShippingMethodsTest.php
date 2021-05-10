@@ -41,23 +41,6 @@ class ShippingMethodsTest extends \PHPUnit\Framework\TestCase
      * @magentoAppArea frontend
      * @magentoAppIsolation enabled
      * @magentoDbIsolation enabled
-     * @magentoConfigFixture current_store carriers/freeshipping/active 1
-     * @magentoConfigFixture current_store carriers/freeshipping/free_shipping_subtotal 100
-     * @magentoConfigFixture current_store carriers/usps/active 1
-     * @magentoConfigFixture current_store carriers/usps/free_shipping_enable 1
-     * @magentoConfigFixture current_store carriers/usps/free_shipping_subtotal 40
-     */
-    public function testItReturnUspsShippingMethod()
-    {
-        $freeShippingAmount = $this->shippingMethodsHelper->getMinimumFreeShippingAmount();
-
-        $this->assertEquals(40, $freeShippingAmount);
-    }
-
-    /**
-     * @magentoAppArea frontend
-     * @magentoAppIsolation enabled
-     * @magentoDbIsolation enabled
      * @magentoConfigFixture current_store carriers/freeshipping/active 0
      * @magentoConfigFixture current_store carriers/flatrate1/active 0
      */
