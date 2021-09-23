@@ -1,8 +1,18 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="MageSuite\ShippingAddons\Service\FreeShippingMethodsProvider">
+        <arguments>
+            <argument name="customFreeShippingFieldsMap" xsi:type="array">
+                <item name="flatrate1" xsi:type="string">minimum_subtotal_for_free_shipping</item>
+                <item name="flatrate2" xsi:type="string">minimum_subtotal_for_free_shipping</item>
+            </argument>
+        </arguments>
+    </type>
+
     <type name="Magento\Checkout\Block\Cart\Sidebar">
         <plugin name="add_free_shipping_bar_variables_to_sidebar" type="MageSuite\ShippingAddons\Plugin\Checkout\Block\Cart\Sidebar\AddFreeShippingBarVariables"/>
     </type>
+
     <type name="Magento\Checkout\Block\Cart\Totals">
         <plugin name="add_free_shipping_bar_variables_to_totals" type="MageSuite\ShippingAddons\Plugin\Checkout\Block\Cart\Totals\AddFreeShippingBarVariables"/>
     </type>

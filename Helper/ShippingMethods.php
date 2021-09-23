@@ -14,6 +14,7 @@ class ShippingMethods extends \Magento\Framework\App\Helper\AbstractHelper
         \MageSuite\ShippingAddons\Service\FreeShippingMethodsProvider $freeShippingMethodsProvider
     ) {
         parent::__construct($context);
+
         $this->freeShippingMethodsProvider = $freeShippingMethodsProvider;
     }
 
