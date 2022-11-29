@@ -1,7 +1,9 @@
 {
     "name": "creativestyle/magesuite-shipping-addons",
-    "license": ["OSL-3.0", "AFL-3.0"],
+    "description": "The module adds a free shipping bar to inform a user about the minimal amount of order that is free shipped",
     "type": "magento2-module",
+    "homepage": "https://creativestyle.de",
+    "license": ["OSL-3.0", "AFL-3.0"],
     "autoload": {
         "files": ["registration.php"],
         "psr-4": {
