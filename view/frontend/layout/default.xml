@@ -3,7 +3,7 @@
     <body>
         <referenceContainer name="minicart.addons">
             <!--
-                In order to use this feature, any shipping method 
+                In order to use this feature, any shipping method
                 with `Free Shipping` threshold has to be enabled.
                 For eg. `Free Shipping` method takes threshold value
                 from `Minimum Order Amount` field.
